@@ -4,7 +4,7 @@ Forked from https://github.com/surjikal/sublime-coffee-compile to provide a cjsx
 
 ## Requirements
 
-This tool looks in your node_modules directory so you need to have the following packages.
+This tool looks in your node_modules directory so you need to have the following packages if they're not already in your project
 
 ```bash
 npm install coffee-react-transform coffee-script
