@@ -1,1 +1,1 @@
-{"dependencies": [], "description": "Preview compiled Coffee React in your editor!", "url": "https://github.com/surjikal/sublime-coffee-compile", "platforms": ["*"], "version": "2015.05.15.16.21.39", "sublime_text": "*"}
+{"dependencies": [], "description": "Preview compiled cjsx in your editor!", "url": "https://github.com/johnnypez/sublime-cjsx-compile", "platforms": ["*"], "version": "2015.05.15.16.21.39", "sublime_text": "*"}
