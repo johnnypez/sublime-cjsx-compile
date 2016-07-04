@@ -1,0 +1,98 @@
+{
+    /**
+     * REQUIRED
+     *
+     * The type of compiler you want to use. The `executable` compiler is
+     * the recommended choice.
+     *
+     * Choices are:
+     *
+     * 1. vanilla-executable (default)
+     *
+     *    Use your `coffee` executable. If this option is selected, you must
+     *    set the `coffee_react_path` setting.
+     *
+     *
+     * 2. vanilla-module
+     *
+     *    This will the `coffee-script` NodeJS module. Node will try to find
+     *    the module based on the working directory of the file you're editing.
+     *
+     */
+     "compiler": "vanilla-executable"
+
+
+    /**
+     * REQUIRED
+     *
+     * Where your `node` executable lives. If this is not specified, then
+     * it is expected to be on Sublime's path.
+     *
+     * On OSX, for example:
+     * `/usr/local/bin`
+     */
+,    "node_path": ""
+
+
+    /**
+     * REQUIRED ONLY IF USING `executable` COMPILER
+     *
+     * Where your `coffee` executable lives.
+     *
+     * On OSX, for example:
+     * `/usr/local/share/npm/lib/node_modules/coffee-script/bin`
+     */
+,    "coffee_react_path": ""
+
+
+    /**
+     * How should the plugin invoke your coffee executable.
+     *
+     * This can be the name of the executable if its in your path,
+     * or it can be the absolute path to it (although in that case,
+     * try to use the `coffee_react_path` setting).
+     *
+     * You can find where your executable is by running "which coffee"
+     * in your terminal.
+     *
+     * Defaults:
+     *   Windows   -> 'cjsx-transform.cmd'
+     *   Linux/OSX -> 'cjsx-transform'
+     */
+,    "coffee_react_executable": ""
+
+
+    /**
+     * Compile without a top-level function wrapper.
+     *
+     * Defaults to `false`.
+     */
+,   "bare": true
+
+
+     /**
+      * Show the CoffeeCompile right+click menu option for files of
+      * these types.
+      *
+      * If the list is empty, the menu option will always be shown.
+      *
+      *
+      * If you want to figure out the path to syntax file for a certain
+      * filetype, do the following:
+      *
+      * 1. Open a new file.
+      * 2. Hit `ctrl/cmd + shift + P` and set the syntax you want.
+      * 3. Open the sublime console by pressing `ctrl/cmd + ~`.
+      * 4. Execute `view.settings().get('syntax')` and copy paste the
+      *    output here.
+      *
+      */
+,    "syntax_patterns": ["Packages/CJSX Syntax/syntax/CJSX.tmLanguage"]
+
+     /**
+      * Path to the file used for syntax highlighting the compiled output pane.
+      *
+      * e.g. "Packages/Better JavaScript/JavaScript.tmLanguage" if you use Better JavaScript
+      */
+,    "syntax_file_js": "Packages/JavaScript/JavaScript.tmLanguage"
+}

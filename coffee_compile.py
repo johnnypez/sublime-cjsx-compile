@@ -18,7 +18,7 @@ except ValueError:
 
 
 PLATFORM_IS_WINDOWS = (sublime.platform() == 'windows')
-DEFAULT_COFFEE_CMD = 'coffee.cmd' if PLATFORM_IS_WINDOWS else 'coffee'
+DEFAULT_COFFEE_CMD = 'cjsx-transform.cmd' if PLATFORM_IS_WINDOWS else 'cjsx-transform'
 DEFAULT_COMPILER = 'vanilla-executable'
 
 
@@ -27,13 +27,13 @@ def settings_adapter(settings):
     node_path = settings.get('node_path')
 
     def get_executable_compiler():
-        coffee_executable = settings.get('coffee_executable') or DEFAULT_COFFEE_CMD
-        coffee_path = settings.get('coffee_path')
-        print(coffee_path)
+        coffee_react_executable = settings.get('coffee_react_executable') or DEFAULT_COFFEE_CMD
+        coffee_react_path = settings.get('coffee_react_path')
+        print(coffee_react_path)
         return CoffeeCompilerExecutableVanilla(
             node_path
-          , coffee_path
-          , coffee_executable
+          , coffee_react_path
+          , coffee_react_executable
         )
 
     def get_module_compiler():
@@ -102,7 +102,7 @@ class CoffeeCompileCommand(sublime_plugin.TextCommand):
 
         if filename:
             self.settings.set('cwd', os.path.dirname(filename))
-        elif not self.settings.get('coffee_path', None):
+        elif not self.settings.get('coffee_react_path', None):
             raise CoffeeCompilationCompilerNotFoundError()
 
         return compiler.compile(coffeescript, options)

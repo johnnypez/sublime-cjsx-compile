@@ -23,7 +23,7 @@ Color Scheme: [Made of Code](http://madeofcode.com/posts/29-photo-my-new-textmat
 ### OSError: [Errno 2] No such file or directory
 
 This is happening because the plugin can't find `coffee` (or `coffee.cmd` on Windows). To fix this,
-go in the settings file and set the `coffee_path` to the executable's directory.
+go in the settings file and set the `coffee_react_path` to the executable's directory.
 
 If you don't know where `coffee` is, run the following in your terminal: ``dirname `which coffee` ``
 

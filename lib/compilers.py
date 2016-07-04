@@ -77,15 +77,15 @@ class CoffeeCompilerModule(CoffeeCompiler):
 
 class CoffeeCompilerExecutable(CoffeeCompiler):
 
-    def __init__(self, node_path=None, coffee_path=None, coffee_executable=None):
+    def __init__(self, node_path=None, coffee_react_path=None, coffee_react_executable=None):
         CoffeeCompiler.__init__(self, node_path)
-        self.coffee_path       = coffee_path
-        self.coffee_executable = coffee_executable
+        self.coffee_react_path       = coffee_react_path
+        self.coffee_react_executable = coffee_react_executable
 
     def compile(self, coffeescript, args):
         javascript = self._execute(
             coffeescript=coffeescript
-          , args=([self.coffee_executable] + args)
+          , args=([self.coffee_react_executable] + args)
         )
         if javascript == "env: node: No such file or directory":
             raise CoffeeExecutableNotFoundError(self.path, javascript)
@@ -93,7 +93,7 @@ class CoffeeCompilerExecutable(CoffeeCompiler):
 
     def _get_path(self):
         path = CoffeeCompiler._get_path(self)
-        if self.coffee_path: path.insert(0, self.coffee_path)
+        if self.coffee_react_path: path.insert(0, self.coffee_react_path)
         return path
 
 
