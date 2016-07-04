@@ -54,7 +54,6 @@ class CoffeeCompilerModule(CoffeeCompiler):
 
     def _get_bootstrap_script(self, options={}):
         return """
-        console.log(require.paths);
         var coffee = require('coffee-script');
         var cjsx_transform = require('coffee-react-transform');
         function transform(code){
@@ -68,7 +67,7 @@ class CoffeeCompilerModule(CoffeeCompiler):
 
     def _get_require_search_paths(self):
         return self._execute(
-            args=['node', '-e', "console.log(require.paths)"]
+            args=['node', '-e', "console.log(module.paths)"]
           , cwd=self.cwd
         )
 
