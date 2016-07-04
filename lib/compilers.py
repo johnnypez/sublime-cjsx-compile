@@ -101,12 +101,12 @@ class CoffeeCompilerExecutableVanilla(CoffeeCompilerExecutable):
 
     def compile(self, coffeescript, options):
         return CoffeeCompilerExecutable.compile(self,
-            coffeescript="cjsx-transform | coffee -cs --bare"
+            coffeescript=coffeescript
           , args=[]
         )
 
     def _options_to_args(self, options):
-        args = ['--stdio', '--print']
-        if options.get('bare'): args.append('--bare')
-        if options.get('literate'): args.append('--literate')
-        return args
+        # args = ['--stdio', '--print']
+        # if options.get('bare'): args.append('--bare')
+        # if options.get('literate'): args.append('--literate')
+        return []
