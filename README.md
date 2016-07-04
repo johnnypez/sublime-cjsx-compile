@@ -25,7 +25,9 @@ which cjsx-transform
 > /Users/ronburgundy/.nvm/v0.10.40/bin
 ```
 
-Add that to your plugin settings
+Add that to your plugin settings in `Sublime Text > Preferences > Package Settings > CJSX Compile > Settings - User`
+
+e.g.
 
 ```json
 {

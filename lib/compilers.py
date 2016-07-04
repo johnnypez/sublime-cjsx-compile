@@ -101,8 +101,8 @@ class CoffeeCompilerExecutableVanilla(CoffeeCompilerExecutable):
 
     def compile(self, coffeescript, options):
         return CoffeeCompilerExecutable.compile(self,
-            coffeescript=coffeescript
-          , args=self._options_to_args(options)
+            coffeescript="cjsx-transform | coffee -cs --bare"
+          , args=[]
         )
 
     def _options_to_args(self, options):
