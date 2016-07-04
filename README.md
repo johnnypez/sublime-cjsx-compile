@@ -8,12 +8,27 @@ Forked from https://github.com/surjikal/sublime-coffee-compile to provide a cjsx
 npm install -g coffee-react-transform
 ```
 
-## Manual Installation
+## Installation
 
-Clone this repository from your Sublime packages directory:
-
-#### Macosx
 ```
-$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-$ git clone https://github.com/johnnypez/sublime-cjsx-compile "CJSX Compile"
+Package Control > Add Repository
+enter: https://github.com/johnnypez/sublime-cjsx-compile
+
+Package Control > Install Package
+select: sublime-cjsx-compile
+```
+
+Get your path to `cjsx-transform`
+
+```
+which cjsx-transform
+> /Users/ronburgundy/.nvm/v0.10.40/bin
+```
+
+Add that to your plugin settings
+
+```json
+{
+  "cjsx_transform_path": "/Users/ronburgundy/.nvm/v0.10.40/bin"
+}
 ```
