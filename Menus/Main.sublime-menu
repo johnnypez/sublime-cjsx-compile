@@ -17,18 +17,18 @@
                         [
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/CJSXCompile/CJSXCompile.sublime-settings"},
+                                "args": {"file": "${packages}/sublime-cjsx-compile/sublime-cjsx-compile.sublime-settings"},
                                 "caption": "Settings – Default"
                             },
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/User/CJSXCompile.sublime-settings"},
+                                "args": {"file": "${packages}/User/sublime-cjsx-compile.sublime-settings"},
                                 "caption": "Settings – User"
                             },
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/CJSXCompile/Keymaps/Default (Windows).sublime-keymap",
+                                    "file": "${packages}/sublime-cjsx-compile/Keymaps/Default (Windows).sublime-keymap",
                                     "platform": "Windows"
                                 },
                                 "caption": "Key Bindings – Default"
@@ -36,7 +36,7 @@
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/CJSXCompile/Keymaps/Default (OSX).sublime-keymap",
+                                    "file": "${packages}/sublime-cjsx-compile/Keymaps/Default (OSX).sublime-keymap",
                                     "platform": "OSX"
                                 },
                                 "caption": "Key Bindings – Default"
@@ -44,7 +44,7 @@
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/CJSXCompile/Keymaps/Default (Linux).sublime-keymap",
+                                    "file": "${packages}/sublime-cjsx-compile/Keymaps/Default (Linux).sublime-keymap",
                                     "platform": "Linux"
                                 },
                                 "caption": "Key Bindings – Default"
