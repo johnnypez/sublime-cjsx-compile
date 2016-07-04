@@ -54,16 +54,21 @@ class CoffeeCompilerModule(CoffeeCompiler):
 
     def _get_bootstrap_script(self, options={}):
         return """
+        console.log(require.paths);
         var coffee = require('coffee-script');
+        var cjsx_transform = require('coffee-react-transform');
+        function transform(code){
+          return coffee.compile(cjsx_transform(code), {bare: true});
+        }
         var buffer = "";
         process.stdin.on('data', function(d) { buffer += d; });
-        process.stdin.on('end',  function()  { console.log(coffee.compile(buffer, %s)); });
+        process.stdin.on('end',  function()  { console.log(transform(buffer)); });
         process.stdin.read();
-        """ % self._options_to_json(options)
+        """
 
     def _get_require_search_paths(self):
         return self._execute(
-            args=['node', '-e', "console.log(module.paths)"]
+            args=['node', '-e', "console.log(require.paths)"]
           , cwd=self.cwd
         )
 

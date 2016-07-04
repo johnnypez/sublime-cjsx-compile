@@ -19,7 +19,7 @@
      *    the module based on the working directory of the file you're editing.
      *
      */
-     "compiler": "vanilla-executable"
+     "compiler": "vanilla-module"
 
 
     /**
