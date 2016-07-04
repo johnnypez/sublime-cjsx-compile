@@ -27,13 +27,13 @@ def settings_adapter(settings):
     node_path = settings.get('node_path')
 
     def get_executable_compiler():
-        coffee_react_executable = settings.get('coffee_react_executable') or DEFAULT_COFFEE_CMD
-        coffee_react_path = settings.get('coffee_react_path')
-        print(coffee_react_path)
+        cjsx_transform_executable = settings.get('cjsx_transform_executable') or DEFAULT_COFFEE_CMD
+        cjsx_transform_path = settings.get('cjsx_transform_path')
+        print(cjsx_transform_path)
         return CoffeeCompilerExecutableVanilla(
             node_path
-          , coffee_react_path
-          , coffee_react_executable
+          , cjsx_transform_path
+          , cjsx_transform_executable
         )
 
     def get_module_compiler():
@@ -102,7 +102,7 @@ class CoffeeCompileCommand(sublime_plugin.TextCommand):
 
         if filename:
             self.settings.set('cwd', os.path.dirname(filename))
-        elif not self.settings.get('coffee_react_path', None):
+        elif not self.settings.get('cjsx_transform_path', None):
             raise CoffeeCompilationCompilerNotFoundError()
 
         return compiler.compile(coffeescript, options)

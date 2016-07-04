@@ -43,7 +43,7 @@ class CoffeeCompilationOSError(CoffeeCompilationError):
 
         if osError.errno is 2:
             message  = "Could not find your `coffee` executable...\n"
-            message += "Your `coffee_react_path` setting is probably not configured properly.\n\n"
+            message += "Your `cjsx_transform_path` setting is probably not configured properly.\n\n"
             message += "To configure CoffeeCompile, go to:\n"
             message += "`Preferences > Package Settings > CoffeeCompile > Settings - User`"
 
@@ -63,10 +63,10 @@ class CoffeeCompilationCompilerNotFoundError(CoffeeCompilationError):
         details  = "CoffeeCompile can't use the nodejs/module-based compiler because you're\n"
         details += "editing an unsaved file, and therefore don't have a current working directory.\n\n"
 
-        details += "You probably want to use the `coffee_react_path` setting, since it lets you\n"
+        details += "You probably want to use the `cjsx_transform_path` setting, since it lets you\n"
         details += "explicitly set a path to your coffee script compiler.\n\n"
 
-        details += "To configure CoffeeCompile and the `coffee_react_path` setting, go to:\n"
+        details += "To configure CoffeeCompile and the `cjsx_transform_path` setting, go to:\n"
         details += "`Preferences > Package Settings > CoffeeCompile > Settings - User`"
 
         super(CoffeeCompilationCompilerNotFoundError, self).__init__(

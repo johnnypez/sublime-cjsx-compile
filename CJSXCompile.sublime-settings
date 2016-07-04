@@ -10,7 +10,7 @@
      * 1. vanilla-executable (default)
      *
      *    Use your `coffee` executable. If this option is selected, you must
-     *    set the `coffee_react_path` setting.
+     *    set the `cjsx_transform_path` setting.
      *
      *
      * 2. vanilla-module
@@ -42,7 +42,7 @@
      * On OSX, for example:
      * `/usr/local/share/npm/lib/node_modules/coffee-script/bin`
      */
-,    "coffee_react_path": ""
+,    "cjsx_transform_path": ""
 
 
     /**
@@ -50,7 +50,7 @@
      *
      * This can be the name of the executable if its in your path,
      * or it can be the absolute path to it (although in that case,
-     * try to use the `coffee_react_path` setting).
+     * try to use the `cjsx_transform_path` setting).
      *
      * You can find where your executable is by running "which coffee"
      * in your terminal.
@@ -59,7 +59,7 @@
      *   Windows   -> 'cjsx-transform.cmd'
      *   Linux/OSX -> 'cjsx-transform'
      */
-,    "coffee_react_executable": ""
+,    "cjsx_transform_executable": ""
 
 
     /**
