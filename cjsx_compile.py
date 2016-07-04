@@ -61,10 +61,10 @@ def settings_adapter(settings):
 
 
 def loadSettings():
-    return sublime.load_settings("CoffeeCompile.sublime-settings")
+    return sublime.load_settings("sublime-cjsx-compile.sublime-settings")
 
 
-class CoffeeCompileCommand(sublime_plugin.TextCommand):
+class CjsxCompileCommand(sublime_plugin.TextCommand):
 
     PANEL_NAME = 'coffeecompile_output'
 
