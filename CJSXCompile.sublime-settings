@@ -87,12 +87,12 @@
       *    output here.
       *
       */
-,    "syntax_patterns": ["Packages/CJSX Syntax/syntax/CJSX.tmLanguage"]
+,    "syntax_patterns": ["$packages/CJSX Syntax/syntax/CJSX.tmLanguage"]
 
      /**
       * Path to the file used for syntax highlighting the compiled output pane.
       *
       * e.g. "Packages/Better JavaScript/JavaScript.tmLanguage" if you use Better JavaScript
       */
-,    "syntax_file_js": "Packages/JavaScript/JavaScript.tmLanguage"
+,    "syntax_file_js": "$packages/JavaScript/JavaScript.tmLanguage"
 }
